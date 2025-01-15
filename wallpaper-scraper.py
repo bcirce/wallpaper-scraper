@@ -18,7 +18,7 @@ driver = webdriver.Firefox(
 driver.maximize_window()
 
 # Function to scrape image URLs from a given URL
-def scrape_images_from_url(driver, url, category, max_num_images=5, wallpaper_folder="C:\\Users\\barba\\git\\wallpaper-scraper\\wallpapers\\"):
+def scrape_images_from_url(driver, url, category, max_num_images=3, wallpaper_folder="C:\\Users\\barba\\git\\wallpaper-scraper\\wallpapers\\"):
     driver.get(url)
     
     # select the node images on the page
@@ -64,7 +64,20 @@ def scrape_images_from_url(driver, url, category, max_num_images=5, wallpaper_fo
         image_name_counter += 1
 
 # List of categories to automate
-categories = ["wallpaper", "nature", "abstract", "animals", "travel"]
+categories = [
+    "wallpaper",
+    "nature",
+    "abstract",
+    "animals",
+    "archival",
+    "architecture-interior",
+    "film",
+    "food-drink",
+    "sports",
+    "street-photography",
+    "textures-patterns",
+    "travel"
+]
 
 base_url = "https://unsplash.com/s/photos/{category}?license=free"
 
