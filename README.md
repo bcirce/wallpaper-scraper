@@ -5,7 +5,8 @@ Coleta de imagens para plano de fundo dinâmico no Windows 11.
 1. Executar o código alterando "wallpaper_folder" para o diretório desejado.
 2. Personalize o plano de fundo em Configurações > Personalização > Personalize seu plano de fundo > Apresentaçõa de slides > Procurar e insira o diretório do wallpaper_folder. 
 
-------------------------------------------------------------
+----
+----
 # wallpaper-scraper
 Coleta de imagens para plano de fundo dinâmico no Windows 11. 
 
