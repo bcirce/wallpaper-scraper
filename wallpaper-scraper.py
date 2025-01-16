@@ -4,6 +4,7 @@ from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import StaleElementReferenceException
 import urllib.request
+import random
 
 # to run Firefox in headless mode
 options = Options()
@@ -18,7 +19,7 @@ driver = webdriver.Firefox(
 driver.maximize_window()
 
 # Function to scrape image URLs from a given URL
-def scrape_images_from_url(driver, url, category, max_num_images=3, wallpaper_folder="C:\\Users\\barba\\git\\wallpaper-scraper\\wallpapers\\"):
+def scrape_images_from_url(driver, url, category, max_num_images=5, wallpaper_folder="C:\\Users\\barba\\git\\wallpaper-scraper\\wallpapers\\"):
     driver.get(url)
     
     # select the node images on the page
@@ -45,6 +46,9 @@ def scrape_images_from_url(driver, url, category, max_num_images=3, wallpaper_fo
             image_urls.append(image_url)
         except StaleElementReferenceException:
             continue
+
+    #pick random images
+    random.shuffle(image_urls) 
 
     # to keep track of the images saved to disk
     image_name_counter = 1
